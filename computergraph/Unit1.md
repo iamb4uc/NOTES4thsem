@@ -38,7 +38,7 @@ Fig: Architecture of Graphic System
 Pixel is the smallest piece of information of an images.
 - Pixels are normally arranged in a regular 2D grid, and are often represented using dots or squares.
 - Each pixel is a sample of an original image where more samples typically provide a more accurate representation of the original.
-- The intensity of each pixel is variable in color systems, each pixel has typically three or four components such as ```Red, Green, and Blue``` or ```Cyan, Magenta, Yellow and Key(black)```.  
+- The intensity of each pixel is variable in color systems, each pixel has typically three or four components such as ```Red, Green, and Blue``` or ```Cyan, Magenta, Yellow and Key(black)```.
 
 ##### Q3: Define display processors. How characters can be represented using display processors?
 Purposes: It frees the CPU from graphics routine task.  
@@ -76,24 +76,37 @@ The origin of this co-ordinate system is positioned at the bottom left corner of
 ![fig1](IMG/frameb1.png) ![fig1](IMG/frameb2.png)
 
 ##### Q5: Define:
-- Refresh rate: It is the number of times per second the display hardware updates its information. It is similar to blinking of eyes in human visual system. Blinking in humans is also for refreshing. There is less flickering effect for more refresh rate in center display units. But too much refresh rate may distort  
+  - Refresh rate: It is the number of times per second the display hardware updates its information. It is similar to blinking  of eyes in human visual system. Blinking in humans is also for refreshing. There is less flickering effect for more refresh   rate in center display units. But too much refresh rate may distort  
 
-- Frame rate:
-- CGA(*Color Graphics Adopter*): It is a hardware video display standard. CGA uses 16 kilobytes of V-RAM. It supports 4bit colors, that means it has 16 different colors. It supports highest resolution of 640x200.  
+  - Frame rate:
+  - CGA(*Color Graphics Adopter*): It is a hardware video display standard. CGA uses 16 kilobytes of V-RAM. It supports 4bit  colors, that means it has 16 different colors. It supports highest resolution of 640x200.  
 
-- VGA(*Video Graphic Array*): It is a display hardware which supports highest resolution of 640x480. VGA supports 8bit colors and has maximum 256 colors.  
+  - VGA(*Video Graphic Array*): It is a display hardware which supports highest resolution of 640x480. VGA supports 8bit colors   and has maximum 256 colors.  
 
-- Resolution: Resolution of an image refers to the total number of pixels along the entire height and weight of image.  
-```Example: A full screen image with resolution 800x600 means that there are 800 columns of pixels, each column comprising 600pixels ie a total of 800x600 is equal to 4,80,000 pixels in the image area.```  
+  - Resolution: Resolution of an image refers to the total number of pixels along the entire height and weight of image.  
+  ```Example: A full screen image with resolution 800x600 means that there are 800 columns of pixels, each column comprising  600pixels ie a total of 800x600 is equal to 4,80,000 pixels in the image area.```  
 
-- Mega Pixel: A mega pixel is a unit of image sensing capacity in a digital device. Mega pixel constitutes of millions of pixels. In general, the more mega pixel is in a device the better the resolution, when printing an image in a given size. A digital camera with a 1.3 mega pixel resolution will print a good quality 4x3 inch print at 300dpi(dot per inch).  
+  - Mega Pixel: A mega pixel is a unit of image sensing capacity in a digital device. Mega pixel constitutes of millions of   pixels. In general, the more mega pixel is in a device the better the resolution, when printing an image in a given size. A   digital camera with a 1.3 mega pixel resolution will print a good quality 4x3 inch print at 300dpi(dot per inch).  
 
-- Refreshing: In a raster scan system, the electron beam is swept across the screen one row at a time from top to bottom. As the electron beam move across each row, the beam intensity is turned on and off to create a pattern is called refreshing.  
+  - Refreshing: In a raster scan system, the electron beam is swept across the screen one row at a time from top to bottom. As  the electron beam move across each row, the beam intensity is turned on and off to create a pattern is called refreshing.  
 
-- Frame: Each complete scanning of a screen is normally called a frame.  
+  - Frame: Each complete scanning of a screen is normally called a frame.  
 
-- Bitmap: On black and white system ie, on monochrome system the frame buffer storing the values of pixels is called a bit map. Each entry in the bit map is the one bit data which determines the on(1) and off(0) of the intensity of the pixel.  
+  - Bitmap: On black and white system ie, on monochrome system the frame buffer storing the values of pixels is called a bit  map. Each entry in the bit map is the one bit data which determines the on(1) and off(0) of the intensity of the pixel.  
 
-- Pixmap: On color system, the frame buffer storing the values of the pixel is called a pix map. Each entry in the pix map occupies a number of bits to represent the color of the pixels. For a true color, display the number of bits for each entry is ```24(2^3 = 8 bits per RGB channel, 2^8 = 256 level of intensity value ie, 256 voltage settings for each of the RGB electron guns)```  
+  - Pixmap: On color system, the frame buffer storing the values of the pixel is called a pix map. Each entry in the pix map  occupies a number of bits to represent the color of the pixels. For a true color, display the number of bits for each entry   is ```24(2^3 = 8 bits per RGB channel, 2^8 = 256 level of intensity value ie, 256 voltage settings for each of the RGB  electron guns)```  
 
-- Aspect Ratio:
+  - Aspect Ratio: The aspect ratio of a picture is the ratio of its width to its height. It is normally shown by two numbers  separated by colon as in ```4:3```. Here, the primary number tells that the picture is 4 unit wide and the subsequent number  tells that the picture is 3 unit high.  
+
+
+##### Q6: Explain Raster Scan System and Random Scan System.  
+***Raster Scan Display***: In a raster scan system the electron beam is swept across the screen on row at a time from top to bottom. As the electron beam moves across each row, the beam intensity is turned on and off to create a pattern of illuminated spots.
+Raster scan displays is based on the CRT technology.  
+![raster scan system](IMG/Rscansys.jpg)  
+FIG: Electrostatic deflection of the electron beam  
+Picture definition is stored in a memory area called the refresh buffer. This memory area holds the set of intensity values for all screen points. These stored intensity values are then retrieved from the refresh buffer and used to control the intensity of the electron beam as it moves from the spot across the screen.  
+Refreshing on raster scan display is arrived out at the rate of 60 to 80 frames per second although some systems are designed for higher refresh rates. Sometimes, refresh rates are described in unit of cycles per second or Hertz(Hz). Where a cycle corresponds to one frame. At the end of each scan line, the electron beam returns to the left side of the screen to begin displaying the next scan line, the return to the left of the screen after refreshing each scan line horizontal retrace of electron beam. And at the end of each frame, the electron beam returns(vertical retrace) to the top left corner of the screen to begin the next frame.  
+![Refreshing on raster scan](IMG/Rscanref.jpg)  
+
+***Random Scan System***: When operated as random scan display unit, a CRT has the electron beam directed only to the parts of the screen where a picture is to be drawn. Random scan monitors draw a picture one line at a time and for this reason are also refered to as vector displays or crystallographic display.  
+![Random Scan Display](IMG/ranscan.png)  
