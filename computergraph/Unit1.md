@@ -128,5 +128,9 @@ Serial | Raster Scan System | Random Scan System |
 9 | Refresh rate independent of picture complexity. | Refresh rate depends directly on picture complexity. |
 10 | Uses scan conversion. | Scan conversion is not required. |
 
-
 ##### Q8: Explain the principle of CRT Technologies.
+A Cathode Ray Tube(CRT) is a specialized vaccum tube in which image are produced when an electron beam stickers a [phosphorescent](https://en.wikipedia.org/wiki/Phosphorescence) screen. Most desktop computer displays make sure of CRTs. The CRT in a computer display is similar to the picture tube in a television receiver. A cathode ray tube consists of several basic componenets as illustrated below. The electron gun generates a narrow beam of electrons. The annodes accelerate the electrons. Deflecting coils produce an extremely low frequency electro magnetic field that allows for constant adjustment of the direction of the electron beam. There are two sets of deflecting coils: horizontal and vertical. The intensity of the beam can be varied. The electron beam produces a tiny, bright visible spot when it strikes the phosphor coated screen.  
+![workings of a CRT screen](IMG/crt.png)  
+
+To produce an image on the screen, complex signals are applied to the deflecting coils and also to the apparatus that controls the intensity of the electron beam. This causes the spot to race accross the screen from right to left and from top to bottom, in a sequence of horizontal lines called raster as viewed from the front of the CRT, the spot moves in a pattern similar to the way that eyes move when reading a single column page of text but the scanning takes place as such a rapid that our eyes sees a constant image over the entire screen.  
+The illustration show only one electro-gun.
