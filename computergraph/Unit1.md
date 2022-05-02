@@ -38,7 +38,8 @@ Fig: Architecture of Graphic System
 Pixel is the smallest piece of information of an images.
 - Pixels are normally arranged in a regular 2D grid, and are often represented using dots or squares.
 - Each pixel is a sample of an original image where more samples typically provide a more accurate representation of the original.
-- The intensity of each pixel is variable in color systems, each pixel has typically three or four components such as ```Red, Green, and Blue``` or ```Cyan, Magenta, Yellow and Key(black)```.
+- The intensity of each pixel is variable in color systems, each pixel has typically three or four components such as *Red, Green, and Blue* or *Cyan, Magenta, Yellow and Key(black)*.  
+
 
 ##### Q3: Define display processors. How characters can be represented using display processors?
 Purposes: It frees the CPU from graphics routine task.  
@@ -59,7 +60,7 @@ lines on the display screen.
 The number of columns in this array equals to the number of pixel on
 each raster line. The term pixel is also used to describe the row and
 column location in frame buffer array that corresponds to the screen
-location. A 512x512 display screen requires ```262144``` pixel memory
+location. A 512x512 display screen requires **262144** pixel memory
 locations.  
 
 Whenever we wish to display a pixel on the screen, a specific value is
@@ -84,7 +85,7 @@ The origin of this co-ordinate system is positioned at the bottom left corner of
   - VGA(*Video Graphic Array*): It is a display hardware which supports highest resolution of 640x480. VGA supports 8bit colors   and has maximum 256 colors.  
 
   - Resolution: Resolution of an image refers to the total number of pixels along the entire height and weight of image.  
-  ```Example: A full screen image with resolution 800x600 means that there are 800 columns of pixels, each column comprising  600pixels ie a total of 800x600 is equal to 4,80,000 pixels in the image area.```  
+  *Example: A full screen image with resolution 800x600 means that there are 800 columns of pixels, each column comprising  600pixels ie a total of 800x600 is equal to 4,80,000 pixels in the image area.*   
 
   - Mega Pixel: A mega pixel is a unit of image sensing capacity in a digital device. Mega pixel constitutes of millions of   pixels. In general, the more mega pixel is in a device the better the resolution, when printing an image in a given size. A   digital camera with a 1.3 mega pixel resolution will print a good quality 4x3 inch print at 300dpi(dot per inch).  
 
@@ -94,9 +95,9 @@ The origin of this co-ordinate system is positioned at the bottom left corner of
 
   - Bitmap: On black and white system ie, on monochrome system the frame buffer storing the values of pixels is called a bit  map. Each entry in the bit map is the one bit data which determines the on(1) and off(0) of the intensity of the pixel.  
 
-  - Pixmap: On color system, the frame buffer storing the values of the pixel is called a pix map. Each entry in the pix map  occupies a number of bits to represent the color of the pixels. For a true color, display the number of bits for each entry   is ```24(2^3 = 8 bits per RGB channel, 2^8 = 256 level of intensity value ie, 256 voltage settings for each of the RGB  electron guns)```  
+  - Pixmap: On color system, the frame buffer storing the values of the pixel is called a pix map. Each entry in the pix map  occupies a number of bits to represent the color of the pixels. For a true color, display the number of bits for each entry   is *24(2^3 = 8 bits per RGB channel, 2^8 = 256 level of intensity value ie, 256 voltage settings for each of the RGB  electron guns)*  
 
-  - Aspect Ratio: The aspect ratio of a picture is the ratio of its width to its height. It is normally shown by two numbers  separated by colon as in ```4:3```. Here, the primary number tells that the picture is 4 unit wide and the subsequent number  tells that the picture is 3 unit high.  
+  - Aspect Ratio: The aspect ratio of a picture is the ratio of its width to its height. It is normally shown by two numbers  separated by colon as in **4:3**. Here, the primary number tells that the picture is 4 unit wide and the subsequent number  tells that the picture is 3 unit high.  
 
 
 ##### Q6: Explain Raster Scan System and Random Scan System.  
