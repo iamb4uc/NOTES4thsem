@@ -111,3 +111,22 @@ Refreshing on raster scan display is arrived out at the rate of 60 to 80 frames 
 
 ***Random Scan System***: When operated as random scan display unit, a CRT has the electron beam directed only to the parts of the screen where a picture is to be drawn. Random scan monitors draw a picture one line at a time and for this reason are also refered to as vector displays or crystallographic display.  
 ![Random Scan Display](IMG/ranscan.png)  
+
+##### Q7: Difference between Raster Scan System and Random Scan System.
+Difference between Raster Scan system and Random scan system is as follows:  
+
+Serial | Raster Scan System | Random Scan System |
+------ | -------------------|------------------- |
+1 | The beam is moved all over the screen, one scan line at a time from top to bottom(horizontal retrace) and the back to top(vertical retrace). | The beam is moved between the end points of the graphics primitive. |
+2 | Picture definition is stored as a set of intensity value of for all screen points called pixels in a refresh buffer area. | Picture definition is stored as a set of line drawing instruction in a display file. |
+3 | Raster scan has ability to display areas filled with solid colors on patterns. | Random scan display draws only lines and characters. |
+4 | It is less expensive. | It is more expensive. |
+5 | It uses interlacing. | Interlacing is not used. |
+6 | In this, resolution is less. | Resolution is high. |
+7 | Uses monochrome or shadow mask type. | Uses monochrome or beam penetration type. |
+8 | Raster scan display smooth lines by approximating them with pixel. | Random scan display draw a continuous and smooth lines . |
+9 | Refresh rate independent of picture complexity. | Refresh rate depends directly on picture complexity. |
+10 | Uses scan conversion. | Scan conversion is not required. |
+
+
+##### Q8: Explain the principle of CRT Technologies.
