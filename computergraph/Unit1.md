@@ -134,3 +134,16 @@ A Cathode Ray Tube(CRT) is a specialized vaccum tube in which image are produced
 
 To produce an image on the screen, complex signals are applied to the deflecting coils and also to the apparatus that controls the intensity of the electron beam. This causes the spot to race accross the screen from right to left and from top to bottom, in a sequence of horizontal lines called raster as viewed from the front of the CRT, the spot moves in a pattern similar to the way that eyes move when reading a single column page of text but the scanning takes place as such a rapid that our eyes sees a constant image over the entire screen.  
 The illustration show only one electro-gun.
+
+##### Q9: Consider a raster system with a resolution of 640x480. Find the size of the frame buffer in bytes to store it if 12bits/pixel are fixed.  
+
+##### Q10: How much time is spent in scanning accross each row of pixels during screen refresh on a raster system with a resolution of 1280x1024 and refresh rate of 60FPS/Hz.  
+
+##### Q11: If the screen resolution is 600x400 and the frames/second is 30, find out the time required to transfer 1 pixel.
+
+##### Q12: What is the aspect ratio of 12inch x 16inch display.
+Factors of 12 and 16 are
+$$
+12=2x2x3  
+16=2x2x2x2
+$$
