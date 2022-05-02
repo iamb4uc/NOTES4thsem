@@ -136,14 +136,12 @@ To produce an image on the screen, complex signals are applied to the deflecting
 The illustration show only one electro-gun.
 
 ##### Q9: Consider a raster system with a resolution of 640x480. Find the size of the frame buffer in bytes to store it if 12bits/pixel are fixed.  
-```
 Given, resolution = 640 * 480  
 1 pixel can store = 12 bits  
 then the size of the frame buffer in memory(in Megabytes):  
 ![step1](https://latex.codecogs.com/gif.latex?%5BMB%20%3D%20%5Cfrac%7Bx%5C%3B%20resolution*y%5C%3B%20resolution*%5Cfrac%7Bbits%7D%7Bpixel%7D%7D%7B8*1024*1024%7D%5D)  
 ![step2](https://latex.codecogs.com/gif.latex?%3D%20%5Cfrac%7B640*480*12%7D%7B8*1024*1024%7D)  
-![step3](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%7B3686400%7D%7B8388608%7D%20%3D%200.439%20%5Csimeq%200.44%20byte) which is required
-```
+![step3](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%7B3686400%7D%7B8388608%7D%20%3D%200.439%20%5Csimeq%200.44%20byte) which is required  
 
 ##### Q10: How much time is spent in scanning accross each row of pixels during screen refresh on a raster system with a resolution of 1280x1024 and refresh rate of 60FPS/Hz.  
 
