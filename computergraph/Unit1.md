@@ -140,12 +140,28 @@ Given, resolution = 640 * 480
 1 pixel can store = 12 bits  
 then the size of the frame buffer in memory(in Megabytes):  
 ![step1](https://latex.codecogs.com/gif.latex?%5BMB%20%3D%20%5Cfrac%7Bx%5C%3B%20resolution*y%5C%3B%20resolution*%5Cfrac%7Bbits%7D%7Bpixel%7D%7D%7B8*1024*1024%7D%5D)  
+
 ![step2](https://latex.codecogs.com/gif.latex?%3D%20%5Cfrac%7B640*480*12%7D%7B8*1024*1024%7D)  
+
 ![step3](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%7B3686400%7D%7B8388608%7D%20%3D%200.439%20%5Csimeq%200.44%20byte) which is required  
 
 ##### Q10: How much time is spent in scanning accross each row of pixels during screen refresh on a raster system with a resolution of 1280x1024 and refresh rate of 60FPS/Hz.  
+Here, resolution ![1024x1024](https://latex.codecogs.com/gif.latex?%3D%201024%5Ctimes%201024)  
+It means that 1024 scan lines takes ![1/60](https://latex.codecogs.com/gif.latex?%5Cfrac%20%7B1%7D%7B60%7D) sec.  
+![Therefore](https://latex.codecogs.com/gif.latex?%5Ctherefore) *1 scan line takes =* ![\frac {1}{60\times 1024}sec=\frac {1}{61440}=0.0058](https://latex.codecogs.com/gif.latex?%5Cfrac%20%7B1%7D%7B60%5Ctimes%201024%7Dsec%3D%5Cfrac%20%7B1%7D%7B61440%7D%3D0.0058) *seconds.*
 
 ##### Q11: If the screen resolution is 600x400 and the frames/second is 30, find out the time required to transfer 1 pixel.
+Here, resolution = ![600\times 400](https://latex.codecogs.com/gif.latex?600%5Ctimes%20400)  
+that means system contains 400 scan lines and each scan line contains 600 pixels.  
+refresh rate ![= 30 frames/seconds](https://latex.codecogs.com/gif.latex?%3D%2030%20frames/seconds)  
+
+1 frame takes ![= \frac {1}{30}](https://latex.codecogs.com/gif.latex?%3D%20%5Cfrac%20%7B1%7D%7B30%7D)  
+
+![Therefore](https://latex.codecogs.com/gif.latex?%5Ctherefore) *resolution* = ![600\times 400](https://latex.codecogs.com/gif.latex?600%5Ctimes%20400)*, 1 frame buffer consists of 400 scan lines.*  
+
+It means that 400 scan lines takes ![=\frac {1}{30}sec](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%20%7B1%7D%7B30%7Dsec)  
+
+1 scan line takes ![=\frac {1}{30\times 400}sec=\frac {1}{12000}sec=0.00008 sec](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%20%7B1%7D%7B30%5Ctimes%20400%7Dsec%3D%5Cfrac%20%7B1%7D%7B12000%7Dsec%3D0.00008%20sec)
 
 ##### Q12: What is the aspect ratio of 12inch x 16inch display.
 Factors of 12 and 16 are  
@@ -157,3 +173,26 @@ Now we have to find the aspect ratio ie ![x:y](https://latex.codecogs.com/gif.la
 *y = CRT height/common denomenator =* ![16/4](https://latex.codecogs.com/gif.latex?%5Cfrac%7B16%7D%7B4%7D%3D4)  
 ![Therefore](https://latex.codecogs.com/gif.latex?%5Ctherefore) Aspect ratio is ![3:4](https://latex.codecogs.com/gif.latex?3%3A4)  
 
+### Interactive Input/Output Device
+###### Input/Output device used for computer graphics:
+***Input Devices:*** Various hardware devices have been develop to enable the user to interact in the more natural manner. These devices can be separated into two classes. They are:  
+1. **Locators**: Locators are the devices which give positione information. The computer reveives from a locator, the co-ordinates for a point. Using a locator we can indicate a position on the screeen. The different locators are as follows:
+	* *Joysticks*: A joystick has two potentiometers. They have been attached to a single lever. Moving the lever forward and backwards changes the settings on one potentiometer.
+	* *Mouse*: An input device that enables us to edit and manipulate.  For example: *in terms of computer graphics, the mouse can be used to crop and image or to use the magic wand tool etc.*
+	* *Tablet*: A tablet composed of a flat surface and a pen like stylus or window like tablet cursor. The tablet is able to sense the position of the stylus.
+2. **Selector**: Selector devices are used to detect the particular graphical object. A selector may pick a particular item but provide no informaion about that item is located on the screen. The different selector devices are as follows:
+	* *Light Pen*: A input device that allows us to draw on a screen with greater positional accuracy, similarly to how we would on a graphic tablet. It can also be used to point it displayed object.
+	* *Keyboard*: The keyboard is an efficient device for inputing such non-graphic data. Cursor control keys and fuction keys are common features on general purpose keyboards. Additional numeric keyboard is often included on the keyboard for fast entry of numeric data.
+	* *Trackball and Spaceball*: The spaceball and trackball are used to accurately draw on the computer. Trackballs and space balls are maily seen or used for arcade games.
+	* *Data glove*: A data glove is a glove which has been wired up with wax which sense movements. These sensors are connected to the computer which then sense the movement of the hand to get information across.
+	* *Digitizers*: An input device that allows us to hand draw graphics an images or a flat screen using a stylus where we can also do painting, selecting, dragging and move.
+	* *Scanners*: An input device that allows us to scan an image, poster, photograph etc which can then be uploaded and edited in a graphic software package.
+	* *Touch Panels*: Touch panels allow displayed object or screen positions to be selected with the touch of a finger. Touch input can be recorded using three methods, namely optical touch panels, electrical touch panels and acoustical touch panels.
+	* *Voice Systems*: Speech recognision is used in some graphic workstations as input devices to accept voice command. The voice system can be used to initate graphics operations or to enter data.
+
+#### Output Devices:
+* *Printers*: This allow us to print of the graphics with create and edit on the computer. We can print them off in color, black and white or gray scale in various sizes.
+* *Plotters*: Plotter is another type of computer printer which prints vector graphics. THere are two types of plotters: One is a pen plotter which is when a pen moves across the surface of the paper and then there is a knive plotter which uses moving knives to cut into a piece material.
+* *Monitors*: This allows us to see the images produced by the computer. The quality of the graphics that we sea depends on the size and the resolution of the monitors.
+* *Phosphors*: The phosphors used in a graphic display are normally choosen for their color characteristics and persistance color should prefferably white particularly for applicants where dark information appears on a light background.
+* *Electron guns*: Electron gun makes use of electro static fields to focus and accelerate the electron beam. A field is generated when two surfaces are raised to different potentials.
