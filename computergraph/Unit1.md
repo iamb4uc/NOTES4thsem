@@ -109,7 +109,7 @@ Picture definition is stored in a memory area called the refresh buffer. This me
 Refreshing on raster scan display is arrived out at the rate of 60 to 80 frames per second although some systems are designed for higher refresh rates. Sometimes, refresh rates are described in unit of cycles per second or Hertz(Hz). Where a cycle corresponds to one frame. At the end of each scan line, the electron beam returns to the left side of the screen to begin displaying the next scan line, the return to the left of the screen after refreshing each scan line horizontal retrace of electron beam. And at the end of each frame, the electron beam returns(vertical retrace) to the top left corner of the screen to begin the next frame.  
 ![Refreshing on raster scan](IMG/Rscanref.jpg)  
 
-***Random Scan System***: When operated as random scan display unit, a CRT has the electron beam directed only to the parts of the screen where a picture is to be drawn. Random scan monitors draw a picture one line at a time and for this reason are also refered to as vector displays or crystallographic display.  
+***Random Scan System***: When operated as random scan display unit, a CRT has the electron beam directed only to the parts of the screen where a picture is to be drawn. Random scan monitors draw a picture one line at a time and for this reason are also referred to as vector displays or crystallographic display.  
 ![Random Scan Display](IMG/ranscan.png)  
 
 ##### Q7: Difference between Raster Scan System and Random Scan System.
@@ -129,10 +129,10 @@ Serial | Raster Scan System | Random Scan System |
 10 | Uses scan conversion. | Scan conversion is not required. |
 
 ##### Q8: Explain the principle of CRT Technologies.
-A Cathode Ray Tube(CRT) is a specialized vaccum tube in which image are produced when an electron beam stickers a [phosphorescent](https://en.wikipedia.org/wiki/Phosphorescence) screen. Most desktop computer displays make sure of CRTs. The CRT in a computer display is similar to the picture tube in a television receiver. A cathode ray tube consists of several basic componenets as illustrated below. The electron gun generates a narrow beam of electrons. The annodes accelerate the electrons. Deflecting coils produce an extremely low frequency electro magnetic field that allows for constant adjustment of the direction of the electron beam. There are two sets of deflecting coils: horizontal and vertical. The intensity of the beam can be varied. The electron beam produces a tiny, bright visible spot when it strikes the phosphor coated screen.  
+A Cathode Ray Tube(CRT) is a specialized vacuum tube in which image are produced when an electron beam stickers a [phosphorescent](https://en.wikipedia.org/wiki/Phosphorescence) screen. Most desktop computer displays make sure of CRTs. The CRT in a computer display is similar to the picture tube in a television receiver. A cathode ray tube consists of several basic components as illustrated below. The electron gun generates a narrow beam of electrons. The anodes accelerate the electrons. Deflecting coils produce an extremely low frequency electro magnetic field that allows for constant adjustment of the direction of the electron beam. There are two sets of deflecting coils: horizontal and vertical. The intensity of the beam can be varied. The electron beam produces a tiny, bright visible spot when it strikes the phosphor coated screen.  
 ![workings of a CRT screen](IMG/crt.png)  
 
-To produce an image on the screen, complex signals are applied to the deflecting coils and also to the apparatus that controls the intensity of the electron beam. This causes the spot to race accross the screen from right to left and from top to bottom, in a sequence of horizontal lines called raster as viewed from the front of the CRT, the spot moves in a pattern similar to the way that eyes move when reading a single column page of text but the scanning takes place as such a rapid that our eyes sees a constant image over the entire screen.  
+To produce an image on the screen, complex signals are applied to the deflecting coils and also to the apparatus that controls the intensity of the electron beam. This causes the spot to race across the screen from right to left and from top to bottom, in a sequence of horizontal lines called raster as viewed from the front of the CRT, the spot moves in a pattern similar to the way that eyes move when reading a single column page of text but the scanning takes place as such a rapid that our eyes sees a constant image over the entire screen.  
 The illustration show only one electro-gun.
 
 ##### Q9: Consider a raster system with a resolution of 640x480. Find the size of the frame buffer in bytes to store it if 12bits/pixel are fixed.  
@@ -145,7 +145,7 @@ then the size of the frame buffer in memory(in Megabytes):
 
 ![step3](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%7B3686400%7D%7B8388608%7D%20%3D%200.439%20%5Csimeq%200.44%20byte) which is required  
 
-##### Q10: How much time is spent in scanning accross each row of pixels during screen refresh on a raster system with a resolution of 1280x1024 and refresh rate of 60FPS/Hz.  
+##### Q10: How much time is spent in scanning across each row of pixels during screen refresh on a raster system with a resolution of 1280x1024 and refresh rate of 60FPS/Hz.  
 Here, resolution ![1024x1024](https://latex.codecogs.com/gif.latex?%3D%201024%5Ctimes%201024)  
 It means that 1024 scan lines takes ![1/60](https://latex.codecogs.com/gif.latex?%5Cfrac%20%7B1%7D%7B60%7D) sec.  
 ![Therefore](https://latex.codecogs.com/gif.latex?%5Ctherefore) *1 scan line takes =* ![\frac {1}{60\times 1024}sec=\frac {1}{61440}=0.0058](https://latex.codecogs.com/gif.latex?%5Cfrac%20%7B1%7D%7B60%5Ctimes%201024%7Dsec%3D%5Cfrac%20%7B1%7D%7B61440%7D%3D0.0058) *seconds.*
@@ -176,23 +176,45 @@ Now we have to find the aspect ratio ie ![x:y](https://latex.codecogs.com/gif.la
 ### Interactive Input/Output Device
 ###### Input/Output device used for computer graphics:
 ***Input Devices:*** Various hardware devices have been develop to enable the user to interact in the more natural manner. These devices can be separated into two classes. They are:  
-1. **Locators**: Locators are the devices which give positione information. The computer reveives from a locator, the co-ordinates for a point. Using a locator we can indicate a position on the screeen. The different locators are as follows:
+1. **Locators**: Locators are the devices which give position information. The computer reveives from a locator, the co-ordinates for a point. Using a locator we can indicate a position on the screeen. The different locators are as follows:
 	* *Joysticks*: A joystick has two potentiometers. They have been attached to a single lever. Moving the lever forward and backwards changes the settings on one potentiometer.
 	* *Mouse*: An input device that enables us to edit and manipulate.  For example: *in terms of computer graphics, the mouse can be used to crop and image or to use the magic wand tool etc.*
 	* *Tablet*: A tablet composed of a flat surface and a pen like stylus or window like tablet cursor. The tablet is able to sense the position of the stylus.
-2. **Selector**: Selector devices are used to detect the particular graphical object. A selector may pick a particular item but provide no informaion about that item is located on the screen. The different selector devices are as follows:
+2. **Selector**: Selector devices are used to detect the particular graphical object. A selector may pick a particular item but provide no information about that item is located on the screen. The different selector devices are as follows:
 	* *Light Pen*: A input device that allows us to draw on a screen with greater positional accuracy, similarly to how we would on a graphic tablet. It can also be used to point it displayed object.
-	* *Keyboard*: The keyboard is an efficient device for inputing such non-graphic data. Cursor control keys and fuction keys are common features on general purpose keyboards. Additional numeric keyboard is often included on the keyboard for fast entry of numeric data.
-	* *Trackball and Spaceball*: The spaceball and trackball are used to accurately draw on the computer. Trackballs and space balls are maily seen or used for arcade games.
+	* *Keyboard*: The keyboard is an efficient device for inputing such non-graphic data. Cursor control keys and function keys are common features on general purpose keyboards. Additional numeric keyboard is often included on the keyboard for fast entry of numeric data.
+	* *Trackball and Space-ball*: The space-ball and trackball are used to accurately draw on the computer. Trackballs and space balls are mainly seen or used for arcade games.
 	* *Data glove*: A data glove is a glove which has been wired up with wax which sense movements. These sensors are connected to the computer which then sense the movement of the hand to get information across.
 	* *Digitizers*: An input device that allows us to hand draw graphics an images or a flat screen using a stylus where we can also do painting, selecting, dragging and move.
 	* *Scanners*: An input device that allows us to scan an image, poster, photograph etc which can then be uploaded and edited in a graphic software package.
 	* *Touch Panels*: Touch panels allow displayed object or screen positions to be selected with the touch of a finger. Touch input can be recorded using three methods, namely optical touch panels, electrical touch panels and acoustical touch panels.
-	* *Voice Systems*: Speech recognision is used in some graphic workstations as input devices to accept voice command. The voice system can be used to initate graphics operations or to enter data.
+	* *Voice Systems*: Speech recognition is used in some graphic workstations as input devices to accept voice command. The voice system can be used to initiate graphics operations or to enter data.
 
 #### Output Devices:
 * *Printers*: This allow us to print of the graphics with create and edit on the computer. We can print them off in color, black and white or gray scale in various sizes.
-* *Plotters*: Plotter is another type of computer printer which prints vector graphics. THere are two types of plotters: One is a pen plotter which is when a pen moves across the surface of the paper and then there is a knive plotter which uses moving knives to cut into a piece material.
+* *Plotters*: Plotter is another type of computer printer which prints vector graphics. There are two types of plotters: One is a pen plotter which is when a pen moves across the surface of the paper and then there is a knife plotter which uses moving knives to cut into a piece material.
 * *Monitors*: This allows us to see the images produced by the computer. The quality of the graphics that we sea depends on the size and the resolution of the monitors.
-* *Phosphors*: The phosphors used in a graphic display are normally choosen for their color characteristics and persistance color should prefferably white particularly for applicants where dark information appears on a light background.
+* *Phosphors*: The phosphors used in a graphic display are normally chosen for their color characteristics and persistence color should preferably white particularly for applicants where dark information appears on a light background.
 * *Electron guns*: Electron gun makes use of electro static fields to focus and accelerate the electron beam. A field is generated when two surfaces are raised to different potentials.
+
+## Bresenhams's line drawing algorithm:
+Let us consider the line in the fig where P is the previously selected pixels and E and NE are two pixels from which we choose at the next stage. Let Q be the intersection point of the line being scan converted with the grid line ![x=xp+1](https://latex.codecogs.com/gif.latex?x%3Dx_p&plus;1)
+![Diagram](IMG/Bresenhamsdiagram.png)  
+The difference between vertical distances from E and NE to Q is computed and the sign of the difference is used to select the pixel whose distance from Q is smaller as the best approximation to the line. If the mid point M lies above the line, the pixel E is chosen to the line; if the mid point lies below the line pixel NE is chosen to the line.  
+Let us consider the straight line by the equation  
+![f(x,y)=ax+by+c=0](https://latex.codecogs.com/gif.latex?f%28x%2Cy%29%3Dax&plus;by&plus;c%3D0..............................%281%29)  
+
+The equation straight line can be written as  
+![y=mx+b](https://latex.codecogs.com/gif.latex?y%3Dmx&plus;b)  
+
+![or =\frac{dy}{dx}x+b](https://latex.codecogs.com/gif.latex?or%20%3D%5Cfrac%7Bdy%7D%7Bdx%7Dx&plus;b)  
+
+or ![ydx=xdy+Bdx](https://latex.codecogs.com/gif.latex?ydx%3Dxdy&plus;Bdx)  
+or ![xdy-ydx+bdx=0](https://latex.codecogs.com/gif.latex?xdy-ydx&plus;Bdx%3D0.........................................%282%29)  
+
+Comparing 1 and 2, we get  
+![a=dy,b=-dx,c=Bdx](https://latex.codecogs.com/gif.latex?a%3Ddy%2C%20b%3D-dx%2C%20c%3DBdx)  
+
+![F(x,y)=0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3D0%2C) *for points on the straight line*  
+![F(x,y)>0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3E0%2C) *for points below the straight line*  
+![F(x,y)<0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3C0%2C) *for points above the straight line*  
