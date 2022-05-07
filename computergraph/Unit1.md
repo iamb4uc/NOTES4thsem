@@ -218,3 +218,82 @@ Comparing 1 and 2, we get
 ![F(x,y)=0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3D0%2C) *for points on the straight line*  
 ![F(x,y)>0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3E0%2C) *for points below the straight line*  
 ![F(x,y)<0,](https://latex.codecogs.com/gif.latex?F%28x%2Cy%29%3C0%2C) *for points above the straight line*  
+We now consider the decision variable.  
+![(x_p+1, y_p+\frac {1}{2})](https://latex.codecogs.com/gif.latex?d%28old%29%3DF%28x_p&plus;1%2C%20y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29), [where ![(x_p+1, y_p+\frac {1}{2})](https://latex.codecogs.com/gif.latex?%28x_p&plus;1%2C%20y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29) is the co-ordinates of the mid point M]  
+![=a(x_p+1)+b(1_p+\frac {1}{2})+c](https://latex.codecogs.com/gif.latex?%3Da%28x_p&plus;1%29&plus;b%281_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29&plus;c)  
+
+If d>0, we choose the pixel NE  
+If d<0, we choose the pixel E  
+If d=0, we choose either of the pixels, so we pick E.  
+If E is chosen, M is incremented by 1 step in x direction and we get  
+![d(new)=F(x_p+2,y_p+\frac {1}{2})](https://latex.codecogs.com/gif.latex?d%28new%29%3DF%28x_p&plus;2%2Cy_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29)  
+![=a(x_p+2)+b(y_p+\frac {1}{2})+c](https://latex.codecogs.com/gif.latex?%3Da%28x_p&plus;2%29&plus;b%28y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29&plus;c)  
+
+![d(new)-d(old)=a(x_p+2)+b(y_p+\frac {1}{2})+c-a(x_p+1)-b(y_p+\frac {1}{2})-c=a](https://latex.codecogs.com/gif.latex?d%28new%29-d%28old%29%3Da%28x_p&plus;2%29&plus;b%28y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29&plus;c-a%28x_p&plus;1%29-b%28y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29-c%3Da)  
+If NE is chosen then M is incremented in both x and y directions by 1 unit. In this:  
+
+![d(new)=d(old)+a+b](https://latex.codecogs.com/gif.latex?d%28new%29%3Dd%28old%29&plus;a&plus;b)  
+![=F(x_p+2,y_p+\frac {3}{2})](https://latex.codecogs.com/gif.latex?%3DF%28x_p&plus;2%2Cy_p&plus;%5Cfrac%20%7B3%7D%7B2%7D%29)  
+![=a(x_p+2)+b(y_p+\frac {3}{2})+c](https://latex.codecogs.com/gif.latex?%3Da%28x_p&plus;2%29&plus;b%28y_p&plus;%5Cfrac%20%7B3%7D%7B2%7D%29&plus;c)  
+
+![d(new)-d(old)=a(x_p+2)+b(y_p+\frac {3}{2})+c-a(x_p+1)+b(y_p+\frac {1}{2})-c=a+b](https://latex.codecogs.com/gif.latex?d%28new%29-d%28old%29%3Da%28x_p&plus;2%29&plus;b%28y_p&plus;%5Cfrac%20%7B3%7D%7B2%7D%29&plus;c-a%28x_p&plus;1%29&plus;b%28y_p&plus;%5Cfrac%20%7B1%7D%7B2%7D%29-c%3Da&plus;b)  
+![d(new)=d(old)+a+b](https://latex.codecogs.com/gif.latex?d%28new%29%3Dd%28old%29&plus;a&plus;b)  
+Since the first pixel is simply the first end point ![(x_o,y_o)](https://latex.codecogs.com/gif.latex?%28x_o%2Cy_o%29), we can directly calculate the initial value of d for choosing between E and NE.
+The first mid point is at  
+![(x_o+1,y_o+\frac {1}{2})and\; F(x_o+1,y_o+\frac {1}{2})=a(x_o+1)+b(y_o+\frac {1}{2})+c](https://latex.codecogs.com/gif.latex?%28x_o&plus;1%2Cy_o&plus;%5Cfrac%20%7B1%7D%7B2%7D%29and%5C%3B%20F%28x_o&plus;1%2Cy_o&plus;%5Cfrac%20%7B1%7D%7B2%7D%29%3Da%28x_o&plus;1%29&plus;b%28y_o&plus;%5Cfrac%20%7B1%7D%7B2%7D%29&plus;c)  
+![=ax_o+a+by_o+\frac {b}{2}+c](https://latex.codecogs.com/gif.latex?%3Dax_o&plus;a&plus;by_o&plus;%5Cfrac%20%7Bb%7D%7B2%7D&plus;c)  
+![=ax_o+by_o+c+a+\frac {b}{2}](https://latex.codecogs.com/gif.latex?%3Dax_o&plus;by_o&plus;c&plus;a&plus;%5Cfrac%20%7Bb%7D%7B2%7D)  
+![a+\frac {b}{2}](https://latex.codecogs.com/gif.latex?%5Csmall%20%3Da&plus;%5Cfrac%20%7Bb%7D%7B2%7D%5C%3B%20%5B%5Cbecause%20%28x_o%2Cy_o%29is%5C%2C%20on%5C%2C%20the%5C%2C%20straight%5C%2C%20line%5C%2C%20ax&plus;by&plus;c%3D0%5C%2C%20we%5C%2C%20get%5C%2C%20ax_o&plus;by_o&plus;c%3D0%5D)  
+
+Thus, ![d(start)=F(x_0+1,y_o+\frac {1}{2})=a+\frac {b}{2}=dy-\frac{dx}{2}](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28start%29%3DF%28x_0&plus;1%2Cy_o&plus;%5Cfrac%20%7B1%7D%7B2%7D%29%3Da&plus;%5Cfrac%20%7Bb%7D%7B2%7D%3Ddy-%5Cfrac%7Bdx%7D%7B2%7D)  
+Using ![d(start)](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28start%29), we can choose the 2nd pixel and so on.  
+To eliminate the fraction in ![d(start)](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28start%29), we define the original equation ![F(x,y)=0](https://latex.codecogs.com/gif.latex?%5Csmall%20F%28x%2Cy%29%3D0) by multiplying it by 2, ie, ![F(x,y)=2(ax+by+c)](https://latex.codecogs.com/gif.latex?%5Csmall%20F%28x%2Cy%29%3D2%28ax&plus;by&plus;c%29)  
+This multiplies each constant and the decision variable by 2, but does not effect the sign of the decision variable.
+
+
+##### Q13: Write an algorithm to draw a straight line between the points![(x_o,y_o)](https://latex.codecogs.com/gif.latex?%28x_o%2Cy_o%29) and ![(x_1,y_1)](https://latex.codecogs.com/gif.latex?%5Csmall%20%28x_1%2Cy_1%29) using Bresenham's line drawing or mid point algorithm.  
+
+<!-- Algorithm -->
+```c
+Bresenhams line(x0, y0, x1, y1, color)
+int x0, y0, x1, y1, color
+/* We want to draw a straight line from (x0+y) to (x1+y1) color gives the pixels color */
+{
+  int dx, dy, incrE, incrNE, d, x, y;
+  dx = x1 - x0;
+  dy = y1 - y0;
+  d = 2 * dy - dx;
+  incrE = 2 * dy;
+  incrNE = 2 * (dy - dx);
+  x = x0;
+  y = y0;
+  put pixel(x, y, color);
+  while(x < x1)
+  {
+    if(d <= 0)
+    {
+      d = d + incrE;
+      x = x + 1;
+    }
+    else
+    {
+      d = d + incrNE;
+      x = x + 1;
+      y = y + 1;
+    }
+    put pixel(x, y, color);
+  }
+}
+```
+## Bresenham's Circle drawing algorithm:
+Assuming the center of the circle is at the origin. In the below figure for a point.  
+![circle](IMG/Bresenhamscircle.png)  
+(h,k), we can draw a total of 8 points on the circle. Hence, we need to draw a curve from A to B, where ![\angle AOB = 45\degree](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cangle%20AOB%20%3D%2045%5Cdegree).  
+
+Let the equation of the circle be  
+![F(x,y)=x^2+y^2-R^2=0](https://latex.codecogs.com/gif.latex?%5Csmall%20F%28x%2Cy%29%3Dx%5E2&plus;y%5E2-R%5E2%3D0) where R is the radius of the circle.  
+Let us now consider the following fig
+![someshit](IMG/Bcirclesomeshit.png)  
+Hence ![(x_p, y_p)](https://latex.codecogs.com/gif.latex?%5Csmall%20%28x_p%2C%20y_p%29) is a previously selected pixel. We want to draw the next pixel which is either E or SE. The co-ordinate of the mid point is ![M(x_p+1, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%5Csmall%20M%28x_p&plus;1%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)  
+We now chose the decision variable:  
+![d(old)=F(x_p+1, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28old%29%3DF%28x_p&plus;1%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)
