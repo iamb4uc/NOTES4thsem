@@ -307,3 +307,97 @@ when E is chosen,
 ![\therefore d(new)-d(old)=2x_p+3](https://latex.codecogs.com/gif.latex?%5Ctherefore%20d%28new%29-d%28old%29%3D2x_p&plus;3)  
 where SE is chosen  
 ![d(new)=F(x_p+2, y_p-\frac {3}{2})](https://latex.codecogs.com/gif.latex?d%28new%29%3DF%28x_p&plus;2%2C%20y_p-%5Cfrac%20%7B3%7D%7B2%7D%29)  
+![=(x_p+2)^2+(y_p-\frac {1}{2})^2](https://latex.codecogs.com/gif.latex?%3D%28x_p&plus;2%29%5E2&plus;%28y_p-%5Cfrac%20%7B1%7D%7B2%7D%29%5E2)  
+![\therefore d(new)-d(old)=\left \{ 2(x_p-y_p)+5 \right \}](https://latex.codecogs.com/gif.latex?%5Ctherefore%20d%28new%29-d%28old%29%3D%5Cleft%20%5C%7B%202%28x_p-y_p%29&plus;5%20%5Cright%20%5C%7D)  
+![or\; d(new)=d(old)+incrSE](https://latex.codecogs.com/gif.latex?or%5C%3B%20d%28new%29%3Dd%28old%29&plus;incrSE)  
+where ![incrSE=\left \{ 2(x_p-y_p)+5 \right\}](https://latex.codecogs.com/gif.latex?incrSE%3D%5Cleft%20%5C%7B%202%28x_p-y_p%29&plus;5%20%5Cright%5C%7D)  
+The initial value of d is obtained by starting point (O, R) and hence the corresponding mid point will be ![(1, R-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%281%2C%20R-%5Cfrac%20%7B1%7D%7B2%7D%29) and we get  
+![d(start)=F(1,R-\frac {1}{2})](https://latex.codecogs.com/gif.latex?d%28start%29%3DF%281%2CR-%5Cfrac%20%7B1%7D%7B2%7D%29)  
+![=1^2+(R-\frac {1}{2})^2-R^2](https://latex.codecogs.com/gif.latex?%3D1%5E2&plus;%28R-%5Cfrac%20%7B1%7D%7B2%7D%29%5E2-R%5E2)  
+
+![=-R+1+\frac{1}{4}](https://latex.codecogs.com/gif.latex?%3D-R&plus;1&plus;%5Cfrac%7B1%7D%7B4%7D)  
+![=\frac {5}{4}-R\cong (1-R)[Neglecting\; \frac {1}{4}]](https://latex.codecogs.com/gif.latex?%3D%5Cfrac%20%7B5%7D%7B4%7D-R%5Ccong%20%281-R%29%5BNeglecting%5C%3B%20%5Cfrac%20%7B1%7D%7B4%7D%5D)  
+##### Q14: Write an algorithm to draw a circle using mid point algorithm or Bresenham's algorithm.
+<!-- Algorithm -->
+```c
+circle_pt(int h, int k, int color)
+{
+  put pixel(h, k, color);
+  put pixel(h, -k, color);
+  put pixel(-h, k, color);
+  put pixel(-h, -k, color);
+  put pixel(k, h, color);
+  put pixel(-k, h, color);
+  put pixel(k, -h, color);
+  put pixel(-k, -h, color);
+}
+
+
+mid point_circle(int radius, int color)
+{
+  int x, y, incrE, incrSE, d;
+  d = 1-radius;
+  x = 0;
+  y = radius;
+  circle-pt(x, y, color)
+  while(x < y)
+  {
+    if (d > 0)
+    {
+      incrSE = 2*(x-y)+5;
+      d += incrSE;
+      x += 1;
+      y -= 1;
+    }
+    else
+    {
+      incrE = 2*x+3;
+      d += incrE;
+      x += 1;
+    }
+    circle_pt(x, y, color);
+  }
+}
+
+```  
+
+
+## DDA Algorithm (Digital Differential Analyzer/Adapter)
+DDA Algorithm uses linear interpolation if variables over an internal between two end points, it is used for rasterization of lines, circle, ellipse etc.  
+Example: DDA samples the lines at unit intervals in one co-ordinate corresponding integer values nearest the line path of other co-ordinate.
+
+##### Advantages:
+- Faster than the direct use of the line equation *y=mx+c*
+- It is simple.  
+
+##### Disadvantages:
+- DDA uses floating point variable which is time consuming.
+- DDA has rounding operations, hence it gives approximate results.
+
+##### Algorithm:
+In the line drawing algorithm, DDA calculates the dy or dx. A line is then sampled at unit intervals in one co-ordinate and corresponding integer values nearest to the line path are determined for the other co-ordinate.  
+**Step 1**: ![A=x_1,\; y_1](https://latex.codecogs.com/gif.latex?A%3Dx_1%2C%5C%3B%20y_1)  
+![B=x_2,\; y_2](https://latex.codecogs.com/gif.latex?B%3Dx_2%2C%5C%3B%20y_2)  
+**Step 2**: ![\bigtriangleup x=x_2-x_1](https://latex.codecogs.com/gif.latex?%5Cbigtriangleup%20x%3Dx_2-x_1) ![diagram](IMG/meh.png)  
+![\bigtriangleup y=y_2-y_1](https://latex.codecogs.com/gif.latex?%5Cbigtriangleup%20y%3Dy_2-y_1)  
+
+**Step 3**: If ![\bigtriangleup x >\bigtriangleup y](https://latex.codecogs.com/gif.latex?%5Cbigtriangleup%20x%20%3E%5Cbigtriangleup%20y) then  
+![Step=\bigtriangleup x](https://latex.codecogs.com/gif.latex?Step%3D%5Cbigtriangleup%20x)  
+else  
+![Step=\bigtriangleup y](https://latex.codecogs.com/gif.latex?Step%3D%5Cbigtriangleup%20y)  
+
+**Step 4**: ![x_{incr}=\frac {\bigtriangleup x}{Step}\; \; \; \; \; \; y_{incr}=\frac {\bigtriangleup y}{Step}](https://latex.codecogs.com/gif.latex?x_%7Bincr%7D%3D%5Cfrac%20%7B%5Cbigtriangleup%20x%7D%7BStep%7D%5C%3B%20%5C%3B%20%5C%3B%20%5C%3B%20%5C%3B%20%5C%3B%20y_%7Bincr%7D%3D%5Cfrac%20%7B%5Cbigtriangleup%20y%7D%7BStep%7D)  
+
+**Step 5**: ![x=x_1+0.5\; sign(x_{incr})](https://latex.codecogs.com/gif.latex?x%3Dx_1&plus;0.5%5C%3B%20sign%28x_%7Bincr%7D%29)  
+![y=y_1+0.5\; sign(y_{incr})](https://latex.codecogs.com/gif.latex?y%3Dy_1&plus;0.5%5C%3B%20sign%28y_%7Bincr%7D%29)
+
+**Step 6**:  
+```c
+i = 1;
+while(i<=step)
+{
+  plot(x, y);
+  x = x + xincr;
+  y = y + yincr;
+}
+```
