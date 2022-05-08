@@ -296,4 +296,14 @@ Let us now consider the following fig
 ![someshit](IMG/Bcirclesomeshit.png)  
 Hence ![(x_p, y_p)](https://latex.codecogs.com/gif.latex?%5Csmall%20%28x_p%2C%20y_p%29) is a previously selected pixel. We want to draw the next pixel which is either E or SE. The co-ordinate of the mid point is ![M(x_p+1, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%5Csmall%20M%28x_p&plus;1%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)  
 We now chose the decision variable:  
-![d(old)=F(x_p+1, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28old%29%3DF%28x_p&plus;1%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)
+![d(old)=F(x_p+1, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?%5Csmall%20d%28old%29%3DF%28x_p&plus;1%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)  
+![d(old)=(x_p+2)^2+(y_p-\frac {1}{2})^2-R^2](https://latex.codecogs.com/gif.latex?d%28old%29%3D%28x_p&plus;2%29%5E2&plus;%28y_p-%5Cfrac%20%7B1%7D%7B2%7D%29%5E2-R%5E2..................%281%29)  
+If d > 0, we choose the pixel SE  
+If d < 0, we choose the pixel E  
+If d = 0, we choose either of the pixels and so, we pick E  
+when E is chosen,  
+![d(new)=F(x_p+2, y_p-\frac {1}{2})](https://latex.codecogs.com/gif.latex?d%28new%29%3DF%28x_p&plus;2%2C%20y_p-%5Cfrac%20%7B1%7D%7B2%7D%29)  
+![=(x_p+2)^2+(y_p-\frac {1}{2})^2-R^2](https://latex.codecogs.com/gif.latex?%3D%28x_p&plus;2%29%5E2&plus;%28y_p-%5Cfrac%20%7B1%7D%7B2%7D%29%5E2-R%5E2........................%282%29)  
+![\therefore d(new)-d(old)=2x_p+3](https://latex.codecogs.com/gif.latex?%5Ctherefore%20d%28new%29-d%28old%29%3D2x_p&plus;3)  
+where SE is chosen  
+![d(new)=F(x_p+2, y_p-\frac {3}{2})](https://latex.codecogs.com/gif.latex?d%28new%29%3DF%28x_p&plus;2%2C%20y_p-%5Cfrac%20%7B3%7D%7B2%7D%29)  
