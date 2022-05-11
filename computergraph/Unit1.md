@@ -401,3 +401,112 @@ while(i<=step)
   y = y + yincr;
 }
 ```
+
+#### Region Filling:
+Region filling is the process of "coloring" in a definite area or a region.
+Region may be described in two ways:
+1. At the pixel level and
+2. At the geometrical level
+
+1. **At the pixel level**: We describe a region either as the totality of pixel that comprises it or in terms of boundary pixels that outline it. In the first case, the region is called interior defined and corresponding filling algorithm is caleed flood filled algorithm and the second type of the region is called boundary define region and the corresponding filling algorithm is called boundary filling algorithm.
+2. **At the geometric level**: At the geometric level, the region is described in terms of objects such as line polygon, circle and so on.
+
+#### Flood fill algorithm:
+When flood filling is used, the user will generally provides on initial pixel 'seed'. From the seed, the algorithm will inspact each of the surrounding 8 pixels to determine whether the extent has been reached. The process is repeated untill all pixels inside the region has been inspected.  
+![floodfilling algo](IMG/ffalgo.png)  
+
+***Algorithm***:  
+In flood fill, fill can be done recursively if we know a seed point(x,y) located inside(*WHITE*). Now scan convert edges into buffer in edge/inside color(*BLACK*).
+```c
+flood_fill(int x, int y)
+{
+    if(read_pixel(x,y)==WHITE)
+    {
+        write_pixel(x,y,BLACK);
+	flood_fill(x-1,y);
+	flood_fill(x+1,y);
+	flood_fill(x,y-1);
+	flood_fill(x,y+1);
+    }
+}
+```
+
+#### Boundary filling algorithm:  
+In boundary filling, the user will provide initial pixel called 'seed'. The boundary fill algorithm then one by one inspect each pixel to the left and right of the seed. When the left and right most boundary pixels are hit, a run or a line of pixels is drawn. Next the boundary filled algorithm inspect each pixel above and below, the line just drawn. This process is continued until all pixel inspected are to the boundary pixels.  
+The boundary fill algorithm/function module is as follows:
+```c
+boundary_fill(x,y,fcolor,bcolor)
+{
+    if(read_pixel(x,y)!=bclor && read_pixel(x,y)!=fcolor)
+    {
+       write_pixel(x,y,fcolor);
+       boundaryfill(x+1,y,fcolor,bcolor);
+       boundaryfill(x,y+1,fcolor,bcolor);
+       boundaryfill(x-1,y,fcolor,bcolor);
+       boundaryfill(x,y-1,fcolor,bcolor);
+    }
+}
+```
+
+#### Polygon filling algorithm:
+- Edges of the polygon are first drawn.
+- Starting from the seed any point inside the polygon examine the neighbouring pixels to check whether the boundary pixel is reached.
+- If the boundary pixels are not reached, pixels are highlighted and the process is repeated.  
+
+**Polygon filling**(*having multiple vertex and multiple edges*)  
+- Seed fill
+  - Boundary Fill
+  - Flood Fill
+- Scan line --------> Used for larger polygon.  
+
+***Scan line fill algorithm***  
+or  
+***Scan line polygon filling algorithm***  
+It is used for solid color filling in polygon.  
+
+**Algorithm**:  
+```c
+function scanline fill()
+{
+  for each scanline do
+  Find the intersection of the scan line with the edges of the polygon sort the intersection by increasing x co-ordinates value;  
+  Fill pixels between consecutive pixels of intersections;
+}
+```
+
+![diagram](IMG/pfill.png)  
+In our above example if we follow the step according to our algorithm, we will make a list of all the intersection(6,11),(16,23).  
+Now lets sort our intersections by increasing x co-ordinates. So, the order will be 6, 11, 16, 23.  
+Now in the final step move pair of intersection so we get two pairs(6,11),(16,23).  
+Now fill in all pixels with color inside the pair.  
+
+##### Q15: 4-way neighborhood or 4-connected neighborhood or 4-way adjacency.  
+As soon as the filling process is initiated, the neighborhood of the seed point is checked for its color content. For neighboring pixels with old or previous color they are flooded with new color. The neighborhood of a  particular point depends on its connectedness. It is classified as:  
+- Four connected neighborhood
+- Eight connected neighborhood  
+
+For the current pixel p the 4 and 8 connected neighborhood are shown in the following figure.  
+![4waydiagram](IMG/4connected.png) ![8waydiagram](IMG/8connected.png)  
+
+##### Q16: Write down the difference between flood fill algorithm and boundary fill algorithm.  
+Sl. |Flood Fill Algorithm | Boundary Fill Algorithm |
+----|---------------------|-------------------------|
+1. | Flood fill colors an entire area is in enclosed figure through interconnected pixels using a single color. | Here area gets colored with pixels of a chosen color as boundary, giving the technique its name. |
+2. | Flood fill is one in which all connected pixels of a selected pixels of a selected color get replaced by a fill color | Boundary fill is very similar with the flood fill, the difference is that the program stopping when a given color boundary is formid |
+3. | A flood fill may use an unpredictable amount of memory to finish because it is not known how many sub fills will be spawned. | Boundary fill is usually more complicated but it is a linear algorithm and does not require recursion. |
+4. | Time consuming. | It is less time consuming. |
+
+
+##### Q17: Write down the drawbacks of DDA algorithm.
+Drawbacks/Disadvantages of DDA algorithm are as follows:  
+- Floating point arithmetic in DDA algorithm is still time consuming.
+- The algorithm is orientation dependent. Hence, end point accuracy is poor.
+- Rounding-off in DDA is time consuming.
+
+##### Q18: What is scan conversion? Explain different techniques of scan conversion.
+Scan conversion is the process of finding the screen pixels that intercepts a polygon. To do this convenient to move to a copy of image space ie scaled to closely correspond to the pixels in our display window.  
+There are various scan conversion techniques. Some of the scan conversion technique are given as:  
+1. **Polynomial method**: In this technique, the polynomial equation is solved to get the pixel positions of a curve or straight line.  
+2. **DDA algorithm**: In this technique, the derivation of a line or a curve is used to find the intermediate pixel positions.
+3. **Mid point method**: It is a method from applied mathematics. This method is a one step method for solving differential equation.
+4. **Brasenham's algorithm**: Z. E. Bresenham's first describe the line drawing algorithm in 1962. Brasenham's algorithm are similar to mid point algorithm.
