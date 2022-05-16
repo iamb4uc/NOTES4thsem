@@ -423,16 +423,16 @@ flood_fill(int x, int y)
     if(read_pixel(x,y)==WHITE)
     {
         write_pixel(x,y,BLACK);
-	flood_fill(x-1,y);
-	flood_fill(x+1,y);
-	flood_fill(x,y-1);
-	flood_fill(x,y+1);
+	      flood_fill(x-1,y);
+	      flood_fill(x+1,y);
+	      flood_fill(x,y-1);
+	      flood_fill(x,y+1);
     }
 }
 ```
 
 #### Boundary filling algorithm:  
-In boundary filling, the user will provide initial pixel called 'seed'. The boundary fill algorithm then one by one inspect each pixel to the left and right of the seed. When the left and right most boundary pixels are hit, a run or a line of pixels is drawn. Next the boundary filled algorithm inspect each pixel above and below, the line just drawn. This process is continued until all pixel inspected are to the boundary pixels.  
+In boundary filling, the user will provide initial pixel called 'seed'. The boundary fill algorithm then one by one inspect each pixel to the left and right of the seed. When the left and right most boundary pixels are hit, a none or a line of pixels is drawn. Next the boundary filled algorithm inspect each pixel above and below, the line just drawn. This process is continued until all pixel inspected are to the boundary pixels.  
 The boundary fill algorithm/function module is as follows:
 ```c
 boundary_fill(x,y,fcolor,bcolor)
@@ -448,7 +448,7 @@ boundary_fill(x,y,fcolor,bcolor)
 }
 ```
 
-#### Polygon filling algorithm:
+#### Polygon filling algorithm:****
 - Edges of the polygon are first drawn.
 - Starting from the seed any point inside the polygon examine the neighbouring pixels to check whether the boundary pixel is reached.
 - If the boundary pixels are not reached, pixels are highlighted and the process is repeated.  
@@ -480,7 +480,7 @@ Now lets sort our intersections by increasing x co-ordinates. So, the order will
 Now in the final step move pair of intersection so we get two pairs(6,11),(16,23).  
 Now fill in all pixels with color inside the pair.  
 
-##### Q15: 4-way neighborhood or 4-connected neighborhood or 4-way adjacency.  
+##### Q15: 4-way neighborhood or 4-connected neighborhood or 4-way adjacency. ****
 As soon as the filling process is initiated, the neighborhood of the seed point is checked for its color content. For neighboring pixels with old or previous color they are flooded with new color. The neighborhood of a  particular point depends on its connectedness. It is classified as:  
 - Four connected neighborhood
 - Eight connected neighborhood  
@@ -503,7 +503,7 @@ Drawbacks/Disadvantages of DDA algorithm are as follows:
 - The algorithm is orientation dependent. Hence, end point accuracy is poor.
 - Rounding-off in DDA is time consuming.
 
-##### Q18: What is scan conversion? Explain different techniques of scan conversion.
+##### Q18: What is scan conversion? Explain different techniques of scan conversion. ****
 Scan conversion is the process of finding the screen pixels that intercepts a polygon. To do this convenient to move to a copy of image space ie scaled to closely correspond to the pixels in our display window.  
 There are various scan conversion techniques. Some of the scan conversion technique are given as:  
 1. **Polynomial method**: In this technique, the polynomial equation is solved to get the pixel positions of a curve or straight line.  
