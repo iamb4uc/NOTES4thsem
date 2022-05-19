@@ -26,3 +26,37 @@ or
 ![Before Rotation](IMG/brotate.png) ![After rotation](IMG/arotate.png)  
 Points can be rotated through an angle D about the origin R is described by:  
 ![\left.\begin{matrix}x'=xcos\Theta-ysin\Theta \\y'=xsin\Theta+ycos\Theta\end{matrix}\right\}](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5Cleft.%5Cbegin%7Bmatrix%7Dx%27%3Dxcos%5CTheta-ysin%5CTheta%20%5C%5Cy%27%3Dxsin%5CTheta&plus;ycos%5CTheta%5Cend%7Bmatrix%7D%5Cright%5C%7D.................%283%29)
+![diagram](IMG/rotatn.png)  
+Fig: Rotation of an object through angle D about the rotation point ![(x_r,y_r)](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%28x_r%2Cy_r%29)  
+The equation (3) can be written as:  
+![formula](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5Cbegin%7Bbmatrix%7D%20x%27%5C%5C%20y%27%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%20cos%5CTheta%20%26%20-sin%5CTheta%5C%5C%20sin%5CTheta%20%26%20cos%5CTheta%20%5Cend%7Bbmatrix%7D%20%5Cbegin%7Bbmatrix%7D%20x%5C%5C%20y%20%5Cend%7Bbmatrix%7D)  
+or ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20P%27%3DR%28%5CTheta%29*P.....................%283%29%5C%3Bwhere%5C%3B%20R%28%5CTheta%29%3D%5Cbegin%7Bbmatrix%7D%20cos%5CTheta%20%26%20-sin%5CTheta%20%5C%5C%20sin%5CTheta%20%26%20cos%5CTheta%20%5Cend%7Bbmatrix%7D)  
+Note:  
+![Note](IMG/note.png)  
+From the triangle OPM, we see that  
+![formula](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20sin%5Calpha%3D%5Cfrac%20%7By%7D%7Br%7D%5C%5C%20%7B%5Ccolor%7BRed%7D%20or%7D%5C%3B%20r%5C%2Csin%5Calpha%20%3D%20y%5C%5C%20%5CRightarrow%20y%3Dr%5C%2C%20sin%5Calpha%20%5C%5C%20cos%5Calpha%3D%5Cfrac%20%7Bx%7D%7Br%7D%5C%5C%20%7B%5Ccolor%7BRed%7D%20or%7D%5C%3B%20r%5C%2C%20cos%5Calpha%20%3D%20x%20%5C%5C%20%5CRightarrow%20x%20%3Dr%5C%2C%20cos%5Calpha%5C%5C%5C%5C%20From%5C%3B%20%5Cbigtriangleup%20OP%27M%27%5C%3B%20we%5C%3B%20see%5C%3B%20that%5C%5C%20sin%28%5CTheta&plus;%5Calpha%29%3D%5Cfrac%20%7By%27%7D%7Br%7D%5C%5C%20%5CRightarrow%20y%27%3Dr%5C%2C%20sin%28%5CTheta&plus;%5Calpha%29%5C%5C%5C%5C%20%7B%5Ccolor%7BRed%7D%20Similarly%7D%2C%5C%5C%20cos%28%5CTheta&plus;%5Calpha%29%3D%5Cfrac%20%7Bx%27%7D%7Br%7D%5C%5C%20%5CRightarrow%20x%27%3Dr%5C%2C%20cos%28%5CTheta&plus;%5Calpha%29%5C%5C%5C%5C%20%7B%5Ccolor%7BRed%7D%20Now%7D%2C%5C%5C%20x%27%3Dr%5C%3Bcos%28%5CTheta&plus;%5Calpha%29%5C%5C%20%3Dr%28cos%5CTheta*cos%5Calpha-sin%5CTheta*sin%5Calpha%29%5C%5C%20%5Cbegin%7Bmatrix%7D%20%3Dr%5C%2Ccos%5Calpha*cos%5CTheta-r%5C%2Csin%5Calpha*sin%5CTheta%20%26%20%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5BS_y*x%3Dr%5C%2Ccos%5Calpha%5D%20%5C%5C%20%3Dx*cos%5CTheta-y*sin%5CTheta%20%26%20%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5BS_x*y%3Dr%5C%2Csin%5Calpha%5D%20%5Cend%7Bmatrix%7D%5C%5C%20y%27%3Dr%5C%2Csin%28%5CTheta&plus;%5Calpha%29%5C%5C%20%3Dr%28sin%5CTheta*cos%5Calpha&plus;cos%5CTheta*sin%5Calpha%29%5C%5C%20%3Dr%5C%3Bsin%5CTheta*cos%5Calpha&plus;r%5C%3Bcos%5CTheta*sin%5Calpha%5C%5C%20%3Dr%5C%3Bsin%5CTheta&plus;y%5C%3Bcos%5CTheta)  <!-- sin\alpha=\frac {y}{r}\\
+{\color{Red} or}\; r\,sin\alpha = y\\
+\Rightarrow y=r\, sin\alpha \\
+cos\alpha=\frac {x}{r}\\
+{\color{Red} or}\; r\, cos\alpha = x \\
+\Rightarrow x =r\, cos\alpha\\\\
+From\; \bigtriangleup  OP'M'\; we\; see\; that\\
+sin(\Theta+\alpha)=\frac {y'}{r}\\
+\Rightarrow y'=r\, sin(\Theta+\alpha)\\\\
+{\color{Red} Similarly},\\
+cos(\Theta+\alpha)=\frac {x'}{r}\\
+\Rightarrow x'=r\, cos(\Theta+\alpha)\\\\
+{\color{Red} Now},\\
+x'=r\;cos(\Theta+\alpha)\\
+=r(cos\Theta*cos\alpha-sin\Theta*sin\alpha)\\
+\begin{matrix}
+=r\,cos\alpha*cos\Theta-r\,sin\alpha*sin\Theta & \;\;\;\;\;\;\;\;\;\;[S_y*x=r\,cos\alpha] \\
+=x*cos\Theta-y*sin\Theta & \;\;\;\;\;\;\;\;\;\;[S_x*y=r\,sin\alpha]
+\end{matrix}\\
+y'=r\,sin(\Theta+\alpha)\\
+=r(sin\Theta*cos\alpha+cos\Theta*sin\alpha)\\
+=r\;sin\Theta*cos\alpha+r\;cos\Theta*sin\alpha\\
+=r\;sin\Theta+y\;cos\Theta -->  
+Note:
+The matrix represented for scaling, translation and rotation are respectively.  
+![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5C%5C%20P%27%3DS*P..............................%281%29%5C%5C%20P%27%3DT&plus;P.............................%282%29%5C%5C%20P%27%3DR*P..............................%283%29)  
