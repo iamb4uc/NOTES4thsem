@@ -60,3 +60,18 @@ y'=r\,sin(\Theta+\alpha)\\
 Note:
 The matrix represented for scaling, translation and rotation are respectively.  
 ![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5C%5C%20P%27%3DS*P..............................%281%29%5C%5C%20P%27%3DT&plus;P.............................%282%29%5C%5C%20P%27%3DR*P..............................%283%29)  
+where translation is in the form of addition but scaling and rotation is in the form of multiplication. We would like to be able to treat all these transformation in a consistent way as multiplication.  
+
+##### <u>Homogeneous co-ordinate</u>
+In homogeneous co-ordinate we add a third co-ordinate to a point(x,y) each point. Instead of being represented by tripple (x,y,w). At the same time we see that two sets of co-ordinates (x,y,w) and (x',y',w') represent the same point if and only if one is multiple of other.  
+Also, atleast one of the homogeneous co-ordinate must be non-zero(0,0,0) is not allowed. If w != 0, we can divide the point (x,y,w) by w and we get(x/w,y/w,1). But (x,y,w) and (x/w,y/w,1) represent the same point. The points with w = 0 are called points of infinity.  
+###### Translation in homogeneous co-ordinate
+
+The equation of translation (1) can be written as:  
+![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5Cbegin%7Bbmatrix%7D%20x%27%5C%5C%20y%27%5C%5C%201%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%26%200%20%26%20dx%20%5C%5C%200%20%26%201%20%26%20dy%5C%5C%200%260%261%20%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D%20x%5C%5C%20y%5C%5C%201%20%5Cend%7Bbmatrix%7D)  
+Here,  
+h = dx = displacement along x-axis.  
+k = dy = displacement along y-axis.  
+or,  
+P' = T(dx, dy)P..........................(I')  
+![](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%7B%5Ccolor%7BRed%7D%20where%7D%5C%3B%20%5C%3B%20T%28dx%2Cdy%29%3D%5Cbegin%7Bbmatrix%7D%201%20%26%200%20%26%20dx%5C%5C%200%20%26%201%20%26%20dy%5C%5C%200%20%26%200%20%26%201%20%5Cend%7Bbmatrix%7Dis%20%5C%3B%20the%5C%3B%20translation%5C%3B%20matrix.)
