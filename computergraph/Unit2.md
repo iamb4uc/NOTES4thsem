@@ -89,3 +89,13 @@ In homogeneous co-ordinate, the two dimensional scaling matrix will be
 ###### Rotation in Homogeneous co-ordinate:
 The equation of rotation can be written as:  
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5Cbegin%7Bbmatrix%7D%20x%27%5C%5C%20y%27%5C%5C%201%20%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%20cos%5CTheta%20%26%20-sin%5CTheta%20%26%200%5C%5C%20sin%5CTheta%20%26%20cos%5CTheta%20%26%200%5C%5C%200%260%261%20%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D%20x%5C%5C%20y%5C%5C%201%20%5Cend%7Bbmatrix%7D%5C%5C%20or%2C%5C%5C%20P%27%3DR%28%5CTheta%29*P.........................%28III%29%5C%5C%20Where%2C%5C%5C%20R%28%5CTheta%29%3D%5Cbegin%7Bbmatrix%7D%20cos%5CTheta%20%26%20-sin%5CTheta%20%26%200%5C%5C%20sin%5CTheta%20%26%20cos%5CTheta%20%26%200%5C%5C%200%260%261%20%5Cend%7Bbmatrix%7D%5C%2C%20is%5C%2C%20the%5C%2C%20rotational%5C%2C%20matrix)  
+
+### Composition of 2D Transformation ie Transformation between co-ordinate systems:
+##### Q: Find the rotation matrix about an arbitrary point A(h,k), h!=0, k!=0.
+To rotate about the point (h,k) we need a sequence of three fundamental transformation.  
+- Translate such that A is at the origin.
+- Rotate an angle ![Theta](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Clarge%20%5CTheta) about the origin.  
+- Translate such that the point at the origin returns to A.  
+![diagram1](IMG/orihouse.png) ![diagram2](IMG/orihouse2.png)  
+![diagram3](IMG/orihouse3and4.png)  
+Thus, the resultant transformation is:  
