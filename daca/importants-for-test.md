@@ -24,12 +24,6 @@ An algorithm is a finite set of instructions that if followed, accomplishes a pa
 
     Step4: Exit
 
-### Selection Sort Algorithm
-
-```
-
-```
-
 ### Analysis of Algorithm
 
 A complete analysis of an algorithm involves the following steps:  
