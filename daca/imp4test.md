@@ -104,3 +104,46 @@ and Exit.
 4. Exit
 
 ### Queue Algorithm
+
+
+
+### Tree
+A tree is a finite set of 1 or more node such that specially designated node for the root and the remaining nodes are partitioned into ![](https://latex.codecogs.com/gif.latex?n%5Cgeqslant%200) disjoint sets T1, ....., Tn are called the subtree of the root.
+
+
+#### Terminalogy:
+![](img/tree.png)
+1. Root: The root node is the topmost node in the tree hierarchy. In the above structure node 1 is the root node of the tree and would be called a parent-child relationship.  
+
+2. Child node: If the node is the descendant of any node then the node is known as a child node.  
+
+3. Parent node: If a node contains any sub-node then the node is called a parent node.
+
+4. Sibling node: The node that have a same parent are known as sibling node.
+
+5. Ancestor node: An ancestor of a node is an predecessor node on any path from root of that node. 1, 2, and 5 are the ancestors of 10.
+
+6. Descendant: The immediate successor of the given node is known as descendant of a node. 10 is the descendant of node 5.
+
+7. Leaf: In a tree data structure, the node which does not have a child is called as LEAF Node. In simple words, a leaf is a node with no child.
+
+
+### Binary tree
+A binary tree is a finite set of node i.e. either empty or consists of a root and two disjoint binary trees called the left and right subtree.
+
+***Note:  
+The maximum number of nodes on level "i" of a binary tree is 2^(i-1) also the maximum number of nodes in a binary tree of depth k is 2^k - 1, K > 0.***
+
+
+### Binary Search Tree (BST)
+A BST is a binary tree which may be empty. If it is not empty, then, it satisfy the following properties:  
+1. Every element has a key and no two elements have the same key.  
+2. The keys in the left subtrees are smaller than the key in the root.  
+3. The keys in the right subtrees are larger then the key in the root.
+4. The left and right subtrees are also BST.  
+
+*Example: Create a BST from the following data element.*
+```45,15,79,90,10,55,12,20,50```  
+**Solution** ![](img/bstex.png)  
+
+### Write an algorithm to delete an element x from a binary search tree t.
