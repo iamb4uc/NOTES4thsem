@@ -85,10 +85,12 @@ This procedure pushes an ITEM onto the STACK
 1. [Stack already filled?]  
 If TOP = MAXSTK,  
 then  
-Print "OVERFLOW"  
-and Exit.  
+Print "OVERFLOW" and Return.  
+
 2. Set TOP = TOP+1  [Increases TOP by 1]
+
 3. Set STACK[TOP] = ITEM. [Inserts ITEM in new TOP position.]
+
 4. Exit.
 
 ##### POP
@@ -97,10 +99,12 @@ This procedure deletes the top element of STACK and assigns it to the variable I
 1. [STACK has an item to be removed?]  
 If TOP = 0,  
 then  
-Print "UNDERFLOW"  
-and Exit.
+Print "UNDERFLOW" and Return.
+
 2. Set ITEM = STACK[TOP]. [Assigns TOP element to ITEM.]
+
 3. Set TOP = TOP - 1. [Decrease TOP by 1.]
+
 4. Exit
 
 ### Queue Algorithm
@@ -111,8 +115,8 @@ This procedure inserts an element ITEM into a queue.
 1. [Queue already filled?]
 If FRONT = 1 and REAR = N, or if FRONT = REAR + 1,
 then
-Print "OVERFLOW"
-and Exit
+Print "OVERFLOW" and Return
+
 2. [Find new value of REAR.]
 If FRONT = NULL, then [Queue initially empty.]
 Set FRONT = 1 and REAR = 1
@@ -120,14 +124,33 @@ Else if REAR = N,
 Set REAR = 1
 Else
 Set REAR = REAR + 1
+
 3. Set QUEUE[REAR] = ITEM. [This inserts new element.]
+
 4. Exit
 
 ##### DELETE
 QDELETE(QUEUE, N, FRONT, REAR. ITEM)  
 This procedure deletes an element from a queue and assigns it to the variable ITEM.
 1. [QUEUE already empty?]
-If FRONT 
+If FRONT = NULL,
+then  
+Print "UNDERFLOW", and Return.
+
+2. Set ITEM = QUEUE[FRONT]
+
+3. [Find new value of FRONT.]
+If FRONT = REAR,
+then [Queue has only one element to start.]
+Set FRONT = NULL and REAR = NULL.
+Else if FRONT = N, then
+Set FRONT = 1
+Else
+Set FRONT = FRONT + 1
+[END OF IF STRUCTURE]
+
+4. Exit
+
 
 ### Tree
 A tree is a finite set of 1 or more node such that specially designated node for the root and the remaining nodes are partitioned into ![](https://latex.codecogs.com/gif.latex?n%5Cgeqslant%200) disjoint sets T1, ....., Tn are called the subtree of the root.
