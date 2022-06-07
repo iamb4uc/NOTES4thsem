@@ -124,7 +124,10 @@ Set REAR = REAR + 1
 4. Exit
 
 ##### DELETE
-QDELETE
+QDELETE(QUEUE, N, FRONT, REAR. ITEM)  
+This procedure deletes an element from a queue and assigns it to the variable ITEM.
+1. [QUEUE already empty?]
+If FRONT 
 
 ### Tree
 A tree is a finite set of 1 or more node such that specially designated node for the root and the remaining nodes are partitioned into ![](https://latex.codecogs.com/gif.latex?n%5Cgeqslant%200) disjoint sets T1, ....., Tn are called the subtree of the root.
