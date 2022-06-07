@@ -74,5 +74,33 @@ Graphically we can represent  Ω-notation as
 ![f(n)=\Theta (g(n)), \exists\; three \; positive \; constants\; c_1,c_2\; and \; n_0](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Clarge%20f%28n%29%3D%5CTheta%20%28g%28n%29%29%2C%20%5Cexists%5C%3B%20three%20%5C%3B%20positive%20%5C%3B%20constants%5C%3B%20c_1%2Cc_2%5C%3B%20and%20%5C%3B%20n_0)  
 Such that  
 ![c_1g(n)\leqslant f(n)\leqslant c_2g(n)\; \forall\; n\geqslant n_0](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B120%7D%20%5Clarge%20c_1g%28n%29%5Cleqslant%20f%28n%29%5Cleqslant%20c_2g%28n%29%5C%3B%20%5Cforall%5C%3B%20n%5Cgeqslant%20n_0)
-Graphically we can represent  Ω-notation as  
+Graphically we can represent  Θ-notation as  
 ![](img/theta-graph.png)  
+
+### Stack Algorithm
+#### Using Linear Array
+##### PUSH
+PUSH(STACK, TOP, MAXSTK, ITEM)
+This procedure pushes an ITEM onto the STACK
+1. [Stack already filled?]  
+If TOP = MAXSTK,  
+then  
+Print "OVERFLOW"  
+and Exit.  
+2. Set TOP = TOP+1  [Increases TOP by 1]
+3. Set STACK[TOP] = ITEM. [Inserts ITEM in new TOP position.]
+4. Exit.
+
+##### POP
+POP(STACK, TOP, ITEM)  
+This procedure deletes the top element of STACK and assigns it to the variable ITEM.  
+1. [STACK has an item to be removed?]  
+If TOP = 0,  
+then  
+Print "UNDERFLOW"  
+and Exit.
+2. Set ITEM = STACK[TOP]. [Assigns TOP element to ITEM.]
+3. Set TOP = TOP - 1. [Decrease TOP by 1.]
+4. Exit
+
+### Queue Algorithm
