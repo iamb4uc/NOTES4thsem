@@ -1,6 +1,4 @@
 # Extra Importants
-
-
 ### What is computer graphics?
 - Art of drawing pictures onto a computer screen with the help of programming.  
 - Involves  
@@ -22,4 +20,7 @@
 
 
 ### Refreshed CRTs or Continual CRTs
-A beam of electron ie Cathode Ray, emitted by the elctron gun passes through focusing and different system that direct the beam towards specified position on the phosphor-coated screen. The phosphor than emits a small spot of light at each position in contact with the electron beam. Because the light emited by phosphor fades away very rapidly, some method is needed in maintaining the screen picture, one way to keep the phosphor glowing is to redraw the picture repeatedly by quickly directing the electron beam back over the same points. This type of display is called Refreshed CRT.
+A beam of electron ie Cathode Ray, emitted by the elctron gun passes through focusing and different system that direct the beam towards specified position on the phosphor-coated screen. The phosphor than emits a small spot of light at each position in contact with the electron beam. Because the light emited by phosphor fades away very rapidly, some method is needed in maintaining the screen picture, one way to keep the phosphor glowing is to redraw the picture repeatedly by quickly directing the electron beam back over the same points. This type of display is called Refreshed CRT. 
+
+### Components of CRT
+The primary component of an electron gun in a CRT are heated electrode and control grid. Heat is supplied to the cathode by directing current through a wire or filament, inside the cylindrical cathode structure. This causes the electrons to be '**boiled-off**' the cathode surface in the vacuume tube inside. Thus CRT envelops the free, negatively charged electrons are then accelerated towards the phosphor coating by the high positive voltage.
