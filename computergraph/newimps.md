@@ -22,4 +22,4 @@
 
 
 ### Refreshed CRTs or Continual CRTs
-
+A beam of electron ie Cathode Ray, emitted by the elctron gun passes through focusing and different system that direct the beam towards specified position on the phosphor-coated screen. The phosphor than emits a small spot of light at each position in contact with the electron beam. Because the light emited by phosphor fades away very rapidly, some method is needed in maintaining the screen picture, one way to keep the phosphor glowing is to redraw the picture repeatedly by quickly directing the electron beam back over the same points. This type of display is called Refreshed CRT.
