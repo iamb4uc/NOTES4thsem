@@ -11,7 +11,11 @@ Whenever we wish to display a pixel on the screen, a specific value is placed in
 
 Each screen pixel location and corresponding memory location in the frame buffer is accused bu the non-negative integer co-ordinate(x,y).  
 
-The x-value refers to the columns, y-valuev
+The x-value refers to the columns, y-value refers to row position.  
+The origin of this coordinate system is positioned at the bottom left corner of the screen or it is positioned at the upper left corner of the screen.  
+
+![fig1](IMG/frameb1.png) ![fig1](IMG/frameb2.png)
+
 ### Aspect ratio
 
 ### Pixel
@@ -19,6 +23,7 @@ A pixel is the smallest piece of information of an image.
 - Pixels are normally arranged in a regular 2D grid, and are often represented using dots or squares.
 - Each pixel is a sample of an original image where more samples typically provide a more accurate representation of the original 
 - The intensity of each pixel is variable in color system, each pixel usually has 3 or 4 components "RED, GREEN and BLUE" or "CYAN, MAGENTA and YELLOW"
+
 ### VGA
 
 ### Resolution
