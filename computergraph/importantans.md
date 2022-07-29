@@ -48,3 +48,28 @@ A pixel is the smallest piece of information of an image.
 ### Polygon filling algorithm
 
 ### Boundary filling algorithm
+
+
+
+## Unit 2
+
+### 2d transformation
+
+### homogeneous coordinate
+
+### graphic premitive
+
+### window port & view port
+
+### clipping and sheilding
+
+### 3d display system
+
+
+## Unit 3
+
+### Spline
+
+### Bspline
+
+### Qubick spline
